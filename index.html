@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+        }
+        #all {
+            width:985px;
+            margin:0 auto;
+        }
+        #head {
+            height:50px;
+            border-bottom:1px solid #ccc;
+        }
+
+        #head p {
+            font-size:22px;
+            height:50px;
+            line-height:50px;
+        }
+
+        #content {
+            width:800px;
+            margin:0px auto;
+        }
+
+        table {
+            margin-top:20px;
+        }
+
+
+        .txt {
+            text-align:right;
+            font-size:16px;
+        }
+        .txt span {
+            color:red;
+        }
+
+        .form-field {
+            width:200px;
+            height:22px;
+        }
+
+        .info {
+            text-align:left;
+            font-size:12px;
+            color:gray;
+        }
+
+        .btn {
+            width:80px;
+            height:28px;
+            float:right;
+            margin-right:20px;
+        }
+    </style>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/qwe.js"></script>
+</head>
+<body>
+    <div id="all">
+        <div id="head">
+            <p>公众服务系统-注册</p>
+        </div>
+        <div id="content">
+            <form action="success.html" onsubmit="return chexkAll();">
+                <table cellpadding="10" cellspacing="20">
+                    <tr>
+                        <td class="txt"><span>*</span>身份证号:</td>
+                        <td>
+                            <input class="form-field" id="sfzh" type="text" name="" value="" />
+                        </td>
+                        <td class="info" id="sfzhinfo">
+                            必填,并符合身份证号格式
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>真实姓名:</td>
+                        <td>
+                            <input class="form-field" type="text" id="txtname" name="" value="" />
+                        </td>
+                        <td class="info" id="nameinfo">
+                            必填,2~4个汉字
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>民族:</td>
+                        <td>
+                            <select class="form-field" id="mingzu">
+                                <option id="mz" value="">-请选择民族-</option>
+                                <option id="zu" value="1">汉族</option>
+                                <option id="zu" value="2">回族</option>
+                                <option id="zu" value="3">壮族</option>
+                            </select>
+                        </td>
+                        <td class="mzinfo" id="mzinfo">
+                            必选
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>性别:</td>
+                        <td>
+                            <input type="radio" name="sex" value="1" />男 &nbsp;&nbsp;
+                            <input type="radio" name="sex" value="0" />女
+                        </td>
+                        <td class="genderinfo" id="genderinfo">
+                            必选
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>电子邮箱:</td>
+                        <td>
+                            <input class="form-field" type="text" id="txtemail" name="" value="" />
+                        </td>
+                        <td class="info" id="emailinfo">
+                            必填,符合邮箱格式
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>手机号码:</td>
+                        <td>
+                            <input class="form-field" type="text" id="txtphone" name="" value="" />
+                        </td>
+                        <td class="info" id="phoneinfo">
+                            必填,手机号由11位数字组成,以13,15,18开头
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>密码:</td>
+                        <td>
+                            <input class="form-field" type="text" id="txtpwd" name="" value="" />
+                        </td>
+                        <td class="info" id="pwdinfo">
+                            必填,英文字母和数字组成的6—18位字符
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>确认密码:</td>
+                        <td>
+                            <input class="form-field" type="text" id="cfpwd" name="" value="" />
+                        </td>
+                        <td class="info" id="cfpwdinfo">
+                            必填,两次密码一致
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="txt"><span>*</span>您从哪里获知本网站:</td>
+                        <td>
+                            <input type="checkbox" name="know" value="" />网上搜索 <br />
+                            <input type="checkbox" name="know" value="" />微信公众号<br />
+                            <input type="checkbox" name="know" value="" />同事、朋友<br />
+                            <input type="checkbox" name="know" value="" />其他
+                        </td>
+                        <td class="info" id="srcinfo">
+                            必选,至少选择一项，可多选
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <input class="btn" type="reset" name="" value="重置" />
+                            <input class="btn" type="submit" name="" value="提交" />
+                        </td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
